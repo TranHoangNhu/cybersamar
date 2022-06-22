@@ -17,6 +17,7 @@
     href="./OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
   <link rel="stylesheet"
     href="./OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/css/lightgallery-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="./css/nhu_animate.css" />
@@ -275,13 +276,14 @@
         <p class="pink_color">Portfolio</p>
         <h2 class="black_color_90">Our Latest Work</h2>
       </div>
-      <div class="portfolio__container">
+      <div class="portfolio__container" id="animated-thumbnails">
         <div class="portfolio__item portfolio__item1 wow animate__ animate__fadeInUp animated"
           style="visibility: visible; animation-name: fadeInUp;">
           <img src="./img/pic1_2.jpg" alt="">
           <div class="portfolio__overlay">
             <div class="portfolio__icon">
-              <a>
+              <a data-exthumbimage="./img/pic1_2.jpg" data-lg-size="2500-2500" class="lightimg"
+                data-src="./img/pic1_2.jpg" data-sub-html="Design" data-lg-id="b730706b-804d-443b-a9c4-1de203d833a7">
                 <i class="fas fa-plus"></i>
               </a>
             </div>
@@ -296,7 +298,8 @@
           <img src="./img/pic2_1.jpg" alt="">
           <div class="portfolio__overlay">
             <div class="portfolio__icon">
-              <a>
+              <a data-exthumbimage="./img/pic2_1.jpg" data-lg-size="2500-2500" class="lightimg"
+                data-src="./img/pic2_1.jpg" data-sub-html="Design" data-lg-id="eb2381fe-a52b-4911-b779-5da309e7d15b">
                 <i class="fas fa-plus"></i>
               </a>
             </div>
@@ -311,7 +314,8 @@
           <img src="./img/pic3_1.jpg" alt="">
           <div class="portfolio__overlay">
             <div class="portfolio__icon">
-              <a>
+              <a data-exthumbimage="./img/pic3_1.jpg" data-lg-size="2500-2500" class="lightimg"
+                data-src="./img/pic3_1.jpg" data-sub-html="Design" data-lg-id="5959e2a8-9a99-4f3f-a669-eed6b6c63782">
                 <i class="fas fa-plus"></i>
               </a>
             </div>
@@ -326,7 +330,8 @@
           <img src="./img/pic4.jpg" alt="">
           <div class="portfolio__overlay">
             <div class="portfolio__icon">
-              <a>
+              <a data-exthumbimage="./img/pic4.jpg" data-lg-size="2500-2500" class="lightimg" data-src="./img/pic4.jpg"
+                data-sub-html="Design" data-lg-id="7935e411-cf12-415b-b968-3f12db6f995a">
                 <i class="fas fa-plus"></i>
               </a>
             </div>
@@ -341,7 +346,8 @@
           <img src="./img/pic5.jpg" alt="">
           <div class="portfolio__overlay">
             <div class="portfolio__icon">
-              <a>
+              <a data-exthumbimage="./img/pic5.jpg" data-lg-size="2500-2500" class="lightimg" data-src="./img/pic5.jpg"
+                data-sub-html="Design" data-lg-id="ea05d72b-1a36-4cde-a19b-e90203716f4c">
                 <i class="fas fa-plus"></i>
               </a>
             </div>
@@ -356,7 +362,8 @@
           <img src="./img/pic6.jpg" alt="">
           <div class="portfolio__overlay">
             <div class="portfolio__icon">
-              <a>
+              <a data-exthumbimage="./img/pic6.jpg" data-lg-size="2500-2500" class="lightimg" data-src="./img/pic6.jpg"
+                data-sub-html="Design" data-lg-id="e4361230-c327-45b8-809a-285dfd532533">
                 <i class="fas fa-plus"></i>
               </a>
             </div>
@@ -889,7 +896,7 @@
     new WOW().init();
   </script>
   <!-- END WOW -->
-  <!-- SLICK CAROUSEL -->
+  <!-- SLICK CAROUSEL
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
@@ -900,7 +907,7 @@
       });
     });
   </script>
-  <!-- END SLICK CAROUSEL -->
+  END SLICK CAROUSEL -->
   <!-- COUNT JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -935,10 +942,128 @@
     })
   </script>
   <!-- END OWL CAROUSEL JS -->
+  <!-- PORTFOLIO_THUMBNAIL -->
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/lightgallery.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/plugins/zoom/lg-zoom.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/plugins/fullscreen/lg-fullscreen.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/plugins/autoplay/lg-autoplay.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/plugins/share/lg-share.min.js"></script>
+  <script>
+    lightGallery(document.getElementById("animated-thumbnails"), {
+      selector: ".lightimg",
+      plugins: [lgZoom, lgThumbnail, lgAutoplay, lgFullscreen, lgShare],
+      alignThumbnails: "left",
+      loop: true,
+      allowMediaOverlap: true,
+      toggleThumb: true,
+      showZoomInOutIcons: true,
+      actualSize: false,
+      exThumbImage: "data-exthumbimage"
+    });
+  </script>
+  <div class="lg-container  " id="lg-container-1" tabindex="-1" aria-modal="true" role="dialog">
+    <div id="lg-backdrop-1" class="lg-backdrop" style="transition-duration: 300ms;"></div>
+
+    <div id="lg-outer-1"
+      class="lg-outer lg-use-css3 lg-css3 lg-media-overlap lg-slide lg-grab lg-show-after-load lg-use-transition-for-zoom lg-animate-thumb lg-has-thumb lg-can-toggle">
+      <div id="lg-content-1" class="lg" style="width: 100%; height:100%">
+        <div id="lg-inner-1" class="lg-inner" style="transition-timing-function: ease; transition-duration: 400ms;">
+        </div>
+        <div id="lg-toolbar-1" class="lg-toolbar lg-group">
+
+          <button type="button" aria-label="Close gallery" id="lg-close-1" class="lg-close lg-icon"></button>
+          <a id="lg-download-1" target="_blank" aria-label="Download" download="" class="lg-download lg-icon"></a>
+          <div class="lg-counter" role="status" aria-live="polite">
+            <span id="lg-counter-current-1" class="lg-counter-current">1 </span> /
+            <span id="lg-counter-all-1" class="lg-counter-all">6 </span>
+          </div><button id="lg-zoom-in-1" type="button" aria-label="Zoom in" class="lg-zoom-in lg-icon"></button><button
+            id="lg-zoom-out-1" type="button" aria-label="Zoom out" class="lg-zoom-out lg-icon"></button><button
+            type="button" aria-label="Toggle thumbnails" class="lg-toggle-thumb lg-icon"></button><button
+            aria-label="Toggle autoplay" type="button" class="lg-autoplay-button lg-icon"></button><button type="button"
+            aria-label="Toggle fullscreen" class="lg-fullscreen lg-icon"></button><button type="button"
+            aria-label="Share" aria-haspopup="true" aria-expanded="false" class="lg-share lg-icon">
+            <ul class="lg-dropdown" style="position: absolute;">
+              <li><a class="lg-share-facebook" target="_blank"><span class="lg-icon"></span><span
+                    class="lg-dropdown-text">Facebook</span></a></li>
+              <li><a class="lg-share-twitter" target="_blank"><span class="lg-icon"></span><span
+                    class="lg-dropdown-text">Twitter</span></a></li>
+              <li><a class="lg-share-pinterest" target="_blank"><span class="lg-icon"></span><span
+                    class="lg-dropdown-text">Pinterest</span></a></li>
+            </ul>
+          </button>
+        </div>
+        <button type="button" id="lg-prev-1" aria-label="Previous slide" class="lg-prev lg-icon"> </button>
+        <button type="button" id="lg-next-1" aria-label="Next slide" class="lg-next lg-icon"> </button>
+        <div id="lg-components-1" class="lg-components">
+          <div class="lg-sub-html" role="status" aria-live="polite"></div>
+          <div class="lg-thumb-outer lg-thumb-align-left lg-grab">
+            <div class="lg-thumb lg-group" style="transition-duration: 400ms; width: 630px; position: relative;">
+              <div data-lg-item-id="0" class="lg-thumb-item  active" style="width:100px; height: 80px;
+    margin-right: 5px;">
+                <img data-lg-item-id="0" src="./img/pic1_2.jpg">
+              </div>
+              <div data-lg-item-id="1" class="lg-thumb-item " style="width:100px; height: 80px;
+    margin-right: 5px;">
+                <img data-lg-item-id="1" src="./img/pic2_1.jpg">
+              </div>
+              <div data-lg-item-id="2" class="lg-thumb-item " style="width:100px; height: 80px;
+    margin-right: 5px;">
+                <img data-lg-item-id="2" src="./img/pic3_1.jpg">
+              </div>
+              <div data-lg-item-id="3" class="lg-thumb-item " style="width:100px; height: 80px;
+    margin-right: 5px;">
+                <img data-lg-item-id="3" src="./img/pic4.jpg">
+              </div>
+              <div data-lg-item-id="4" class="lg-thumb-item " style="width:100px; height: 80px;
+    margin-right: 5px;">
+                <img data-lg-item-id="4" src="./img/pic5.jpg">
+              </div>
+              <div data-lg-item-id="5" class="lg-thumb-item " style="width:100px; height: 80px;
+    margin-right: 5px;">
+                <img data-lg-item-id="5" src="./img/pic6.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg-progress-bar">
+          <div class="lg-progress"></div>
+        </div>
+        <div class="lg-dropdown-overlay"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper@8.0.7/swiper-bundle.min.js"></script>
+  <script>
+    var testimonialThumbs = new Swiper(".testimonial__thumbs", {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      centeredSlides: true,
+      freeMode: true,
+      autoplay: true,
+      loop: true,
+      speed: 3000
+    });
+    var testimonialContent = new Swiper(".testimonial__comment", {
+      spaceBetween: 10,
+      autoplay: true,
+      loop: true,
+      speed: 3000,
+      thumbs: {
+        swiper: testimonialThumbs
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      }
+    });
+  </script>
+  <!-- END PORTFOLIO_THUMBNAIL -->
   <!-- BACK TO TOP -->
   <script src="./back-to-top-master/back-to-top-master/assets/js/util.js"></script>
   <script src="./back-to-top-master/back-to-top-master/assets/js/main.js"></script>
   <!-- END BACK TO TOP -->
+
 </body>
 
 </html>

@@ -728,3 +728,6 @@ footer::before {
   margin-left: -78px;
   color: #fff;
 }
+.lg-container {
+  display: none;
+}
